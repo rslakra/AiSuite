@@ -1,4 +1,4 @@
-# AiSuite-Core
+# AiSuite
 
 ---
 
