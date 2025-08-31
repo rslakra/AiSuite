@@ -1,0 +1,3 @@
+[submodule "aisuite-core"]
+	path = aisuite-core
+	url = git@github.com:rslakra/aisuite-core.git
