@@ -1,0 +1,23 @@
+// Example JavaScript for sending a message to the API Gateway
+async function sendMessage() {
+    const userInput = document.getElementById('userInput').value;
+    const apiUrl = 'YOUR_API_GATEWAY_ENDPOINT_URL'; // Replace with your API Gateway URL
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: userInput }),
+        });
+
+        const data = await response.json();
+        document.getElementById('chatOutput').innerText += `\nYou: ${userInput}\nBot: ${data.response}`;
+        document.getElementById('userInput').value = ''; // Clear input
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('chatOutput').innerText += `\nError: Could not get response.`;
+    }
+}
+
