@@ -12,6 +12,6 @@ PyJWT==2.13.0
 pypdf==6.13.3
 PyYAML==6.0.2
 requests==2.32.4
-typing_extensions==4.12.2
+typing_extensions==4.13.2
 urllib3==2.7.0
 setuptools==82.0.1
