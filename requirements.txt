@@ -11,7 +11,7 @@ pydantic_core==2.20.1
 PyJWT==2.13.0
 pypdf==6.13.3
 PyYAML==6.0.2
-requests==2.32.4
+requests==2.34.2
 typing_extensions==4.13.2
 urllib3==2.7.0
 setuptools==82.0.1
