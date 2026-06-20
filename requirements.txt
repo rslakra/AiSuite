@@ -9,7 +9,7 @@ python-dotenv==1.2.2
 pydantic==2.8.2
 pydantic_core==2.20.1
 PyJWT==2.13.0
-pypdf==6.6.0
+pypdf==6.13.3
 PyYAML==6.0.2
 requests==2.32.4
 typing_extensions==4.12.2
