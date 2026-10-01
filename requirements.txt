@@ -13,5 +13,5 @@ pypdf==6.16.1
 PyYAML==6.0.3
 requests==2.34.2
 typing_extensions==4.15.0
-urllib3==2.7.0
+urllib3==2.8.0
 setuptools==84.0.0
