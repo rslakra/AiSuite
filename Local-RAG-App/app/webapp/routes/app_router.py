@@ -89,10 +89,10 @@ class AppRouter(BaseRouter):
 
         try:
             reply = self.services.rag.answer(question, model)
-        except Exception as exc:
+        except Exception:
             return JSONResponse(
                 status_code=500,
-                content={"error": f"Couldn't get an answer: {exc}"},
+                content={"error": "Couldn't get an answer right now."},
             )
 
         return {"answer": reply}
