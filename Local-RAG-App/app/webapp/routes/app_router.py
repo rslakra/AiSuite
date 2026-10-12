@@ -74,7 +74,13 @@ class AppRouter(BaseRouter):
         try:
             chunk_count = self.services.rag.index_file(str(path))
         except ValueError as exc:
-            return JSONResponse(status_code=400, content={"error": str(exc)})
+            logger.warning(
+                "Invalid uploaded file '%s': %s",
+                filename,
+                exc,
+                exc_info=True,
+            )
+            return JSONResponse(status_code=400, content={"error": "Invalid file content."})
         except Exception as exc:
             logger.exception("Unexpected error while processing uploaded file '%s': %s", filename, exc)
             return JSONResponse(
