@@ -1,6 +1,7 @@
 """Web UI and JSON API routes."""
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 
 from fastapi import File, Request, UploadFile
@@ -8,6 +9,8 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from pydantic import BaseModel
 
 from app.webapp.routes.base import BaseRouter
+
+logger = logging.getLogger(__name__)
 
 
 class ChatRequest(BaseModel):
@@ -73,9 +76,10 @@ class AppRouter(BaseRouter):
         except ValueError as exc:
             return JSONResponse(status_code=400, content={"error": str(exc)})
         except Exception as exc:
+            logger.exception("Unexpected error while processing uploaded file '%s': %s", filename, exc)
             return JSONResponse(
                 status_code=500,
-                content={"error": f"Couldn't process the file: {exc}"},
+                content={"error": "Couldn't process the file right now."},
             )
 
         return {"filename": filename, "chunks": chunk_count}
