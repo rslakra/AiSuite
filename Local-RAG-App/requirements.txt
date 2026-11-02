@@ -5,4 +5,4 @@ ollama>=0.6.3
 pypdf>=6.21.2
 python-dotenv>=1.0.0
 python-multipart>=0.0.32
-uvicorn[standard]>=0.32.0
+uvicorn[standard]>=0.54.0
