@@ -1,6 +1,6 @@
-[submodule "aisuite-core"]
-	path = aisuite-core
-	url = git@github.com:rslakra/aisuite-core.git
 [submodule "AutomotiveChatbot"]
 	path = AutomotiveChatbot
 	url = git@github.com:rslakra/AutomotiveChatbot.git
+[submodule "Syntix"]
+	path = Syntix
+	url = git@github.com:rslakra/Syntix.git
